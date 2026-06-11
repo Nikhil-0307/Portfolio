@@ -51,7 +51,19 @@ section{
     border-radius:25px;
     text-decoration:none;
     font-weight:bold;
-} 
+}
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.skill{
+    background:#dbeafe;
+    padding:10px 20px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
  </style>
 </head>
  <body>
@@ -61,9 +73,11 @@ section{
     <a href="#projects">Projects</a>
 </nav>
 <header>
+    <img src="profile.jpg" alt="Nikhil" width="150">
     <h1>Nikhil K</h1>
-<p>Full Stack Developer | HTML | CSS | JavaScript | Angular | MongoDB</p>
-<a href="#" class="btn">Download Resume</a>
+    <p>Aspiring Full Stack Developer</p>
+    <a href="#" class="btn">Download Resume</a>
+    <a href="https://github.com/Nikhil-0307" class="btn">GitHub</a>
 </header>
 <section id="about">
     <h2>About Me</h2>
@@ -73,30 +87,32 @@ section{
         improving my programming skills.
     </p>
 </section>
-
-
-<section id="skills" >
+<section id="skills">
     <h2>Skills</h2>
-    <ul>
-        <li<section id="skills">
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Angular</li>
-        <li>MongoDB</li>
-        <li>Git & GitHub</li>
-    </ul>
+
+    <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Angular</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">GitHub</div>
+    </div>
 </section>
-<section>
+<section id="projects">
     <h2>Projects</h2>
-    <ul>
-        <li>Portfolio Website</li>
-        <li>Coming Soon: Calculator App</li>
-        <li>Coming Soon: To-Do List App</li>
-    </ul>
+
+    <div class="card">
+        <h3>Portfolio Website</h3>
+        <p>Built using HTML and CSS.</p>
+    </div>
+
+    <div class="card">
+        <h3>Calculator App</h3>
+        <p>Coming Soon</p>
+    </div>
 </section>
+
 <section>
     <h2>Contact</h2>
     <p>Email: yourname@gmail.com</p>
