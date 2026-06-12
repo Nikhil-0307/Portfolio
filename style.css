@@ -215,3 +215,43 @@ section:hover{
 .education-card p{
     margin:5px 0 0;
 }
+header img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    display:block;
+    margin:0 auto 20px auto;
+}
+header img{
+    box-shadow:0 0 25px rgba(255,255,255,0.8);
+    border:5px solid white;
+}
+header img{
+    transition:0.4s;
+}
+
+header img:hover{
+    transform:scale(1.08);
+}
+header img{
+    animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+header{
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
