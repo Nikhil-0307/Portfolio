@@ -175,3 +175,43 @@ section:hover{
         transform:translateY(0);
     }
 }
+
+.education-card{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    background:white;
+    padding:20px;
+    margin:15px 0;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.education-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.icon{
+    font-size:40px;
+    animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.education-card h3{
+    margin:0;
+    color:#2563eb;
+}
+
+.education-card p{
+    margin:5px 0 0;
+}
