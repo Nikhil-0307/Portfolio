@@ -200,8 +200,7 @@ nav{
     }
 }
 .card,
-.skill,
-.projects .card{
+.skill{
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
@@ -248,6 +247,25 @@ nav{
 .light-mode .highlight{
     color:#0ea5e9;
 }
+.bar{
+    width:100%;
+    height:10px;
+    background:#334155;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:8px;
+}
+.progress{
+    height:100%;
+    background:#38bdf8;
+    border-radius:10px;
+}
+.progress.html{width:95%;}
+.progress.css{width:90%;}
+.progress.js{width:85%;}
+.progress.angular{width:75%;}
+.progress.mongo{width:70%;}
+.progress.github{width:90%;}
 </style>
 </head>
 <body>
@@ -380,14 +398,16 @@ window.onload = typeEffect;
 </script>
 <script>
 const hiddenElements = document.querySelectorAll('.card, .skill');
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
+
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
             entry.target.classList.add('show');
         }
     });
 });
-hiddenElements.forEach(el => observer.observe(el));
+
+hiddenElements.forEach(el=>observer.observe(el));
 </script>
 </body>
 </html>
