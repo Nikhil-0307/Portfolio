@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nikhil K | Portfolio</title>
-
 <style>
 *{
     margin:0;
@@ -12,18 +11,14 @@
     box-sizing:border-box;
     font-family:'Segoe UI',sans-serif;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 body{
     background:#0f172a;
     color:white;
     line-height:1.6;
 }
-
-/* Navbar */
 nav{
     position:fixed;
     width:100%;
@@ -35,7 +30,6 @@ nav{
     padding:20px;
     z-index:1000;
 }
-
 nav a{
     color:white;
     text-decoration:none;
@@ -43,12 +37,9 @@ nav a{
     font-weight:600;
     transition:0.3s;
 }
-
 nav a:hover{
     color:#38bdf8;
 }
-
-/* Hero Section */
 header{
     min-height:100vh;
     display:flex;
@@ -59,7 +50,6 @@ header{
     background:linear-gradient(135deg,#1e293b,#0f172a);
     padding:20px;
 }
-
 .profile-pic{
     width:200px;
     height:200px;
@@ -69,26 +59,21 @@ header{
     box-shadow:0 0 30px rgba(56,189,248,0.7);
     animation:float 4s ease-in-out infinite;
 }
-
 @keyframes float{
     0%,100%{transform:translateY(0);}
     50%{transform:translateY(-15px);}
 }
-
 header h1{
     font-size:4rem;
     margin-top:20px;
 }
-
 header p{
     color:#cbd5e1;
     margin-top:10px;
 }
-
 .highlight{
     color:#38bdf8;
 }
-
 .btn{
     display:inline-block;
     margin:15px;
@@ -98,36 +83,28 @@ header p{
     font-weight:bold;
     transition:0.3s;
 }
-
 .primary{
     background:#38bdf8;
     color:white;
 }
-
 .secondary{
     border:2px solid #38bdf8;
     color:#38bdf8;
 }
-
 .btn:hover{
     transform:translateY(-5px);
 }
-
-/* Sections */
 section{
     max-width:1100px;
     margin:auto;
     padding:100px 20px;
 }
-
 .section-title{
     text-align:center;
     font-size:2.5rem;
     margin-bottom:50px;
     color:#38bdf8;
 }
-
-
 .card{
     background:#1e293b;
     padding:25px;
@@ -141,7 +118,6 @@ section{
     padding-left:25px;
     color:#cbd5e1;
 }
-
 .card ul li{
     margin-bottom:8px;
 }
@@ -149,14 +125,11 @@ section{
     transform:translateY(-10px);
     box-shadow:0 10px 25px rgba(56,189,248,0.2);
 }
-
-/* Skills */
 .skills{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:20px;
 }
-
 .skill{
     background:#1e293b;
     padding:20px;
@@ -165,42 +138,32 @@ section{
     font-weight:bold;
     transition:0.3s;
 }
-
 .skill:hover{
     background:#38bdf8;
     transform:scale(1.05);
 }
-
-/* Projects */
 .projects{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     gap:20px;
 }
-
-/* Contact */
 .contact{
     text-align:center;
 }
-
 .contact p{
     margin:10px 0;
 }
-
-/* Footer */
 footer{
     background:#020617;
     text-align:center;
     padding:20px;
     color:#94a3b8;
 }
-
 @media(max-width:768px){
     header h1{
         font-size:2.5rem;
     }
-
-    nav{
+nav{
         flex-wrap:wrap;
     }
 }
@@ -212,22 +175,18 @@ footer{
     cursor:pointer;
     font-size:18px;
 }
-
 .light-mode{
     background:#ffffff;
     color:#111827;
 }
-
 .light-mode nav{
     background:rgba(255,255,255,0.95);
 }
-
 .light-mode .card,
 .light-mode .skill{
     background:#f3f4f6;
     color:#111827;
 }
-
 .light-mode header{
     background:linear-gradient(135deg,#e5e7eb,#ffffff);
 }
@@ -235,7 +194,6 @@ footer{
     content: "|";
     animation: blink 0.7s infinite;
 }
-
 @keyframes blink{
     50%{
         opacity: 0;
@@ -248,16 +206,51 @@ footer{
     transform: translateY(50px);
     transition: all 0.8s ease;
 }
-
 .show{
     opacity: 1;
     transform: translateY(0);
 }
+.light-mode{
+    background:#ffffff;
+    color:#111827;
+}
+.light-mode header{
+    background:linear-gradient(135deg,#f8fafc,#ffffff);
+}
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode p,
+.light-mode li,
+.light-mode a{
+    color:#111827;
+}
+.light-mode header p{
+    color:#374151;
+}
+.light-mode .card,
+.light-mode .skill{
+    background:#f3f4f6;
+    color:#111827;
+}.light-mode nav{
+    background:rgba(255,255,255,0.95);
+}
+.light-mode nav a{
+    color:#111827;
+}
+.light-mode nav a:hover{
+    color:#38bdf8;
+}
+.light-mode footer{
+    background:#e5e7eb;
+    color:#111827;
+}
+.light-mode .highlight{
+    color:#0ea5e9;
+}
 </style>
-
 </head>
 <body>
-
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -266,24 +259,19 @@ footer{
     <a href="#contact">Contact</a>
     <button id="theme-toggle">🌙</button>
 </nav>
-
 <header>
     <img src="profile.jpg" alt="Nikhil" class="profile-pic">
-
-    <h1>Nikhil <span class="highlight">K</span></h1>
+<h1>Nikhil <span class="highlight">K</span></h1>
     <p><span id="typing"></span></p>
     <p>HTML • CSS • JavaScript • Angular • MongoDB</p>
-
-    <div>
+<div>
         <a href="#" class="btn primary">Download Resume</a>
         <a href="https://github.com/Nikhil-0307" class="btn secondary">GitHub</a>
     </div>
 </header>
-
 <section id="about">
     <h2 class="section-title">About Me</h2>
-
-    <div class="card">
+<div class="card">
         <p>
             I am an aspiring Full Stack Developer passionate about building
             responsive websites and modern web applications. I enjoy learning
@@ -291,54 +279,42 @@ footer{
         </p>
     </div>
 </section>
-
 <section id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills">
-
 <div class="skill">
     <p>HTML5 <span>95%</span></p>
     <div class="bar"><div class="progress html"></div></div>
 </div>
-
 <div class="skill">
     <p>CSS3 <span>90%</span></p>
     <div class="bar"><div class="progress css"></div></div>
 </div>
-
 <div class="skill">
     <p>JavaScript <span>85%</span></p>
     <div class="bar"><div class="progress js"></div></div>
 </div>
-
 <div class="skill">
     <p>Angular <span>75%</span></p>
     <div class="bar"><div class="progress angular"></div></div>
 </div>
-
 <div class="skill">
     <p>MongoDB <span>70%</span></p>
     <div class="bar"><div class="progress mongo"></div></div>
 </div>
-
 <div class="skill">
     <p>GitHub <span>90%</span></p>
     <div class="bar"><div class="progress github"></div></div>
 </div>
-
 </div>
-    
-</section>
-
+    </section>
 <section id="education">
     <h2 class="section-title">Education</h2>
-
-    <div class="card">
+<div class="card">
         <h3>🎓 Bachelor's Degree</h3>
         <p>Currently pursuing my degree with a focus on Web Development.</p>
     </div>
-
-    <div class="card">
+<div class="card">
         <h3>📜 Certifications</h3>
     <ul>
         <li>HTML & CSS – Great Learning</li>
@@ -347,53 +323,43 @@ footer{
         <li>Introduction to Front-End Development – Coursera</li>
     </ul>
         </div>
-
-    <div class="card">
+<div class="card">
         <h3>🏆 Achievements</h3>
         <p>Building projects and improving programming skills daily.</p>
     </div>
 </section>
-
 <section id="projects">
     <h2 class="section-title">Projects</h2>
-
-    <div class="projects">
+<div class="projects">
         <div class="card">
             <h3>Portfolio Website</h3>
             <p>Responsive personal portfolio built with HTML and CSS.</p>
         </div>
-
-        <div class="card">
+<div class="card">
             <h3>Calculator App</h3>
             <p>JavaScript-based calculator application.</p>
         </div>
-
-        <div class="card">
+<div class="card">
             <h3>Future Projects</h3>
             <p>More exciting full-stack projects coming soon.</p>
         </div>
     </div>
 </section>
-
 <section id="contact">
     <h2 class="section-title">Contact</h2>
-
-    <div class="card contact">
+<div class="card contact">
         <p>📧 nikhil0307k@gmail.com</p>
         <p>💻 github.com/Nikhil-0307</p>
     </div>
 </section>
-
 <footer>
     <p>© 2026 Nikhil K | All Rights Reserved</p>
 </footer>
 <script>
 const toggle = document.getElementById("theme-toggle");
-
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
+if (document.body.classList.contains("light-mode")) {
         toggle.textContent = "☀️";
     } else {
         toggle.textContent = "🌙";
@@ -403,7 +369,6 @@ toggle.addEventListener("click", () => {
 <script>
 const text = "Full Stack Developer";
 let index = 0;
-
 function typeEffect() {
     if (index < text.length) {
         document.getElementById("typing").innerHTML += text.charAt(index);
@@ -411,12 +376,10 @@ function typeEffect() {
         setTimeout(typeEffect, 100);
     }
 }
-
 window.onload = typeEffect;
 </script>
 <script>
 const hiddenElements = document.querySelectorAll('.card, .skill');
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -424,7 +387,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-
 hiddenElements.forEach(el => observer.observe(el));
 </script>
 </body>
