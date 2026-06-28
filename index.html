@@ -231,6 +231,28 @@ footer{
 .light-mode header{
     background:linear-gradient(135deg,#e5e7eb,#ffffff);
 }
+#typing::after{
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity: 0;
+    }
+}
+.card,
+.skill,
+.projects .card{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 </head>
@@ -249,8 +271,7 @@ footer{
     <img src="profile.jpg" alt="Nikhil" class="profile-pic">
 
     <h1>Nikhil <span class="highlight">K</span></h1>
-
-    <p>Full Stack Developer</p>
+    <p><span id="typing"></span></p>
     <p>HTML • CSS • JavaScript • Angular • MongoDB</p>
 
     <div>
@@ -273,15 +294,40 @@ footer{
 
 <section id="skills">
     <h2 class="section-title">Skills</h2>
-
     <div class="skills">
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Angular</div>
-        <div class="skill">MongoDB</div>
-        <div class="skill">GitHub</div>
-    </div>
+
+<div class="skill">
+    <p>HTML5 <span>95%</span></p>
+    <div class="bar"><div class="progress html"></div></div>
+</div>
+
+<div class="skill">
+    <p>CSS3 <span>90%</span></p>
+    <div class="bar"><div class="progress css"></div></div>
+</div>
+
+<div class="skill">
+    <p>JavaScript <span>85%</span></p>
+    <div class="bar"><div class="progress js"></div></div>
+</div>
+
+<div class="skill">
+    <p>Angular <span>75%</span></p>
+    <div class="bar"><div class="progress angular"></div></div>
+</div>
+
+<div class="skill">
+    <p>MongoDB <span>70%</span></p>
+    <div class="bar"><div class="progress mongo"></div></div>
+</div>
+
+<div class="skill">
+    <p>GitHub <span>90%</span></p>
+    <div class="bar"><div class="progress github"></div></div>
+</div>
+
+</div>
+    
 </section>
 
 <section id="education">
@@ -353,6 +399,33 @@ toggle.addEventListener("click", () => {
         toggle.textContent = "🌙";
     }
 });
+</script>
+<script>
+const text = "Full Stack Developer";
+let index = 0;
+
+function typeEffect() {
+    if (index < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100);
+    }
+}
+
+window.onload = typeEffect;
+</script>
+<script>
+const hiddenElements = document.querySelectorAll('.card, .skill');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+hiddenElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
