@@ -201,13 +201,7 @@ nav{
 }
 .card,
 .skill{
-    opacity: 0;
-    transform: translateY(50px);
     transition: all 0.8s ease;
-}
-.show{
-    opacity: 1;
-    transform: translateY(0);
 }
 .light-mode{
     background:#ffffff;
@@ -266,6 +260,16 @@ nav{
 .progress.angular{width:75%;}
 .progress.mongo{width:70%;}
 .progress.github{width:90%;}
+.card,
+.skill{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 </head>
 <body>
@@ -385,28 +389,49 @@ if (document.body.classList.contains("light-mode")) {
 });
 </script>
 <script>
-const text = "Full Stack Developer";
-let index = 0;
+const roles = [
+    "Full Stack Developer",
+    "Web Developer",
+    "Front-End Developer"
+];
+const typing = document.getElementById("typing");
+let roleIndex = 0;
+let charIndex = 0;
+let deleting = false;
 function typeEffect() {
-    if (index < text.length) {
-        document.getElementById("typing").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
+    const currentRole = roles[roleIndex];
+if (!deleting) {
+        typing.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+if (charIndex === currentRole.length) {
+            deleting = true;
+            setTimeout(typeEffect, 1500);
+            return;
+        }
+    } else {
+        typing.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+if (charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
     }
+setTimeout(typeEffect, deleting ? 60 : 120);
 }
-window.onload = typeEffect;
+typeEffect();
 </script>
 <script>
-const hiddenElements = document.querySelectorAll('.card, .skill');
-
-const observer = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
+const hiddenElements = document.querySelectorAll(".card, .skill");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
         }
     });
+}, {
+    threshold: 0.2
 });
-hiddenElements.forEach(el=>observer.observe(el));
+hiddenElements.forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
