@@ -204,6 +204,33 @@ footer{
         flex-wrap:wrap;
     }
 }
+#theme-toggle{
+    margin-left:20px;
+    padding:8px 15px;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.light-mode{
+    background:#ffffff;
+    color:#111827;
+}
+
+.light-mode nav{
+    background:rgba(255,255,255,0.95);
+}
+
+.light-mode .card,
+.light-mode .skill{
+    background:#f3f4f6;
+    color:#111827;
+}
+
+.light-mode header{
+    background:linear-gradient(135deg,#e5e7eb,#ffffff);
+}
 </style>
 
 </head>
@@ -215,6 +242,7 @@ footer{
     <a href="#education">Education</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <button id="theme-toggle">🌙</button>
 </nav>
 
 <header>
@@ -313,6 +341,18 @@ footer{
 <footer>
     <p>© 2026 Nikhil K | All Rights Reserved</p>
 </footer>
+<script>
+const toggle = document.getElementById("theme-toggle");
 
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("light-mode");
+
+    if (document.body.classList.contains("light-mode")) {
+        toggle.textContent = "☀️";
+    } else {
+        toggle.textContent = "🌙";
+    }
+});
+</script>
 </body>
 </html>
