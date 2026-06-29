@@ -15,9 +15,24 @@ html{
     scroll-behavior:smooth;
 }
 body{
-    background:#0f172a;
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0f172a, #312e81);
+    background-size:400% 400%;
+    animation:gradientBG 15s ease infinite;
     color:white;
     line-height:1.6;
+    overflow-x:hidden;
+}
+
+@keyframes gradientBG{
+    0%{
+        background-position:0% 50%;
+    }
+    50%{
+        background-position:100% 50%;
+    }
+    100%{
+        background-position:0% 50%;
+    }
 }
 nav{
     position:fixed;
@@ -270,9 +285,77 @@ nav{
     opacity: 1;
     transform: translateY(0);
 }
+.bg-animation{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.bg-animation span{
+    position:absolute;
+    display:block;
+    border-radius:50%;
+    background:rgba(56,189,248,0.18);
+    animation:floatCircle 18s linear infinite;
+}
+
+.bg-animation span:nth-child(1){
+    width:220px;
+    height:220px;
+    left:10%;
+    animation-duration:18s;
+}
+
+.bg-animation span:nth-child(2){
+    width:160px;
+    height:160px;
+    left:75%;
+    animation-duration:22s;
+    animation-delay:2s;
+}
+
+.bg-animation span:nth-child(3){
+    width:260px;
+    height:260px;
+    left:45%;
+    animation-duration:26s;
+    animation-delay:4s;
+}
+
+.bg-animation span:nth-child(4){
+    width:140px;
+    height:140px;
+    left:85%;
+    animation-duration:20s;
+    animation-delay:6s;
+}
+
+@keyframes floatCircle{
+    0%{
+        transform:translateY(100vh) scale(0.8);
+        opacity:0;
+    }
+    20%{
+        opacity:0.4;
+    }
+    100%{
+        transform:translateY(-120vh) scale(1.4);
+        opacity:0;
+    }
+}
 </style>
 </head>
 <body>
+    <div class="bg-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
