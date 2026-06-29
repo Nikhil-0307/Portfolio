@@ -121,12 +121,20 @@ section{
     color:#38bdf8;
 }
 .card{
-    background:#1e293b;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;
     padding:25px;
-    border-radius:15px;
     margin:15px 0;
-    transition:0.3s;
-    border:1px solid rgba(255,255,255,0.1);
+    transition:0.4s;
+    box-shadow:0 8px 30px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.02);
+    box-shadow:0 15px 35px rgba(56,189,248,0.35);
 }
 .card ul{
     margin-top:10px;
@@ -347,9 +355,25 @@ nav{
         opacity:0;
     }
 }
+.cursor-glow{
+    position:fixed;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#38bdf8;
+    box-shadow:
+        0 0 15px #38bdf8,
+        0 0 35px #38bdf8,
+        0 0 60px #38bdf8;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    z-index:9999;
+    transition:left .08s linear, top .08s linear;
+}
 </style>
 </head>
 <body>
+    <div class="cursor-glow"></div>
     <div class="bg-animation">
     <span></span>
     <span></span>
@@ -515,6 +539,27 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 hiddenElements.forEach(el => observer.observe(el));
+</script>
+<script>
+const glow = document.querySelector(".cursor-glow");
+
+let mouseX = 0;
+let mouseY = 0;
+let currentX = 0;
+let currentY = 0;
+
+document.addEventListener("mousemove", (e)=>{
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+function animateGlow(){
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+glow.style.left = currentX + "px";
+    glow.style.top = currentY + "px";
+requestAnimationFrame(animateGlow);
+}
+animateGlow();
 </script>
 </body>
 </html>
