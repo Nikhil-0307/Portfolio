@@ -4,15 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nikhil K | Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
+    
     <div class="cursor-glow"></div>
     <div class="bg-animation">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
+
 </div>
+
 <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -21,178 +26,208 @@
     <a href="#contact">Contact</a>
     <button id="theme-toggle">🌙</button>
 </nav>
+
 <header>
-    <img src="profile.jpg" alt="Nikhil" class="profile-pic">
-<h1>Nikhil <span class="highlight">K</span></h1>
-    <p><span id="typing"></span></p>
-    <p>HTML • CSS • JavaScript • Angular • MongoDB</p>
-<div>
-        <a href="#" class="btn primary">Download Resume</a>
-        <a href="https://github.com/Nikhil-0307" class="btn secondary">GitHub</a>
+    <section class="hero-stats">
+    <div class="stat">
+        <h2>10+</h2>
+        <p>Projects</p>
     </div>
-</header>
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-<div class="card">
+
+    <div class="stat">
+        <h2>6+</h2>
+        <p>Technologies</p>
+    </div>
+
+    <div class="stat">
+        <h2>100%</h2>
+        <p>Responsive</p>
+    </div>
+
+</section>
+    
+<img src="profile.jpg" alt="Nikhil" class="profile-pic">
+        <h1>Nikhil <span class="highlight">K</span></h1>
+    <p class="hero-role">
+        <span id="typing"></span>
+    </p>
+
+    <p class="hero-description">
+        Passionate about creating beautiful, responsive and modern web applications.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="resume.pdf" download class="btn primary">
+             Download Resume
+        </a>
+
+        <a href="https://github.com/Nikhil-0307" target="_blank" class="btn secondary">
+            GitHub
+        </a>
+</div>
+
+<div class="scroll-indicator"></div>
+    </header>
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="card about-card">
+            <div class="about-text">
+            <h3>Hello, I'm Nikhil 👋</h3>
         <p>
-            I am an aspiring Full Stack Developer passionate about building
-            responsive websites and modern web applications. I enjoy learning
-            new technologies and continuously improving my coding skills.
+            I am an aspiring Full Stack Developer passionate about creating modern,
+            responsive and user-friendly web applications.
+
+            I enjoy solving problems, learning new technologies and continuously
+            improving my programming skills.
         </p>
     </div>
+</div>
 </section>
+
 <section id="skills">
     <h2 class="section-title">Skills</h2>
     <div class="skills">
-<div class="skill">
-    <p>HTML5 <span>95%</span></p>
+    <div class="skill">
+    <i class="fa-brands fa-html5"></i>
+    <h3>HTML5</h3>
     <div class="bar"><div class="progress html"></div></div>
 </div>
+
 <div class="skill">
-    <p>CSS3 <span>90%</span></p>
+    <i class="fa-brands fa-css3-alt"></i>
+    <h3>CSS3</h3>
     <div class="bar"><div class="progress css"></div></div>
 </div>
+
 <div class="skill">
-    <p>JavaScript <span>85%</span></p>
+    <i class="fa-brands fa-js"></i>
+    <h3>JavaScript</h3>
     <div class="bar"><div class="progress js"></div></div>
 </div>
+
 <div class="skill">
-    <p>Angular <span>75%</span></p>
+    <i class="fa-brands fa-angular"></i>
+    <h3>Angular</h3>
     <div class="bar"><div class="progress angular"></div></div>
 </div>
+
 <div class="skill">
-    <p>MongoDB <span>70%</span></p>
+    <i class="fa-solid fa-database"></i>
+    <h3>MongoDB</h3>
     <div class="bar"><div class="progress mongo"></div></div>
 </div>
+
 <div class="skill">
-    <p>GitHub <span>90%</span></p>
+    <i class="fa-brands fa-github"></i>
+    <h3>GitHub</h3>
     <div class="bar"><div class="progress github"></div></div>
 </div>
 </div>
-    </section>
+</section>
+
 <section id="education">
     <h2 class="section-title">Education</h2>
-<div class="card">
+    <div class="card">
         <h3>🎓 Bachelor's Degree</h3>
         <p>Currently pursuing my degree with a focus on Web Development.</p>
     </div>
-<div class="card">
-        <h3>📜 Certifications</h3>
-    <ul>
-        <li>HTML & CSS – Great Learning</li>
-        <li>JavaScript – Great Learning</li>
-        <li>Git & GitHub – Great Learning</li>
-        <li>Introduction to Front-End Development – Coursera</li>
-    </ul>
-        </div>
-<div class="card">
+
+    <div class="card">
+    <h3>📜 Certifications</h3>
+        <ul>
+            <li>HTML & CSS – Great Learning</li>
+            <li>JavaScript – Great Learning</li>
+            <li>Git & GitHub – Great Learning</li>
+            <li>Introduction to Front-End Development – Coursera</li>
+        </ul>
+    </div>
+
+    <div class="card">
         <h3>🏆 Achievements</h3>
         <p>Building projects and improving programming skills daily.</p>
     </div>
 </section>
+
 <section id="projects">
-    <h2 class="section-title">Projects</h2>
-<div class="projects">
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Responsive personal portfolio built with HTML and CSS.</p>
-        </div>
-<div class="card">
-            <h3>Calculator App</h3>
-            <p>JavaScript-based calculator application.</p>
-        </div>
-<div class="card">
-            <h3>Future Projects</h3>
-            <p>More exciting full-stack projects coming soon.</p>
-        </div>
-    </div>
+    <h2 class="section-title">Featured Projects</h2>
+        <div class="projects">
+        <div class="card project-card">
+    <h3>Portfolio Website</h3>
+<p>
+Modern personal portfolio built with HTML, CSS and JavaScript.
+</p>
+    <a href="#" class="project-btn">View Project →</a>
+</div>
+
+<div class="card project-card">
+    <h3>Calculator App</h3>
+        <p>
+            Interactive calculator using JavaScript with responsive design.
+        </p>
+<a href="#" class="project-btn">View Project →</a>
+
+</div>
+
+<div class="card project-card">
+    <h3>Future Full Stack App</h3>
+<p>
+Angular + MongoDB full stack application currently under development.
+</p>
+    <a href="#" class="project-btn">Coming Soon</a>
+</div>
+</div>
 </section>
+
+<section class="experience">
+    <h2 class="section-title">Why Hire Me?</h2>
+    <div class="card">
+✔ Responsive Websites
+
+<br><br>
+
+✔ Clean UI Design
+
+<br><br>
+
+✔ Fast Performance
+
+<br><br>
+
+✔ Modern Animations
+
+<br><br>
+
+✔ Easy to Maintain Code
+
+</div>
+</section>
+
 <section id="contact">
-    <h2 class="section-title">Contact</h2>
-<div class="card contact">
-        <p>📧 nikhil0307k@gmail.com</p>
-        <p>💻 github.com/Nikhil-0307</p>
+<h2 class="section-title">Let's Work Together</h2>
+    <div class="card contact">
+<h3>Interested in working together?</h3>
+        <p>I am always open to internships and freelance opportunities.</p>
+        <br>
+        <a href="mailto:nikhil0307k@gmail.com" class="btn primary">
+        Email Me
+        </a>
+        <a href="https://github.com/Nikhil-0307"
+        target="_blank"
+        class="btn secondary">
+        GitHub
+        </a>
     </div>
 </section>
+
+<section class="quote">
+    <h2>
+        "Design is intelligence made visible."
+    </h2>
+</section>
+
 <footer>
     <p>© 2026 Nikhil K | All Rights Reserved</p>
 </footer>
-<script>
-const toggle = document.getElementById("theme-toggle");
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-if (document.body.classList.contains("light-mode")) {
-        toggle.textContent = "☀️";
-    } else {
-        toggle.textContent = "🌙";
-    }
-});
-</script>
-<script>
-const roles = [
-    "Full Stack Developer",
-    "Web Developer",
-    "Front-End Developer"
-];
-const typing = document.getElementById("typing");
-let roleIndex = 0;
-let charIndex = 0;
-let deleting = false;
-function typeEffect() {
-    const currentRole = roles[roleIndex];
-if (!deleting) {
-        typing.textContent = currentRole.substring(0, charIndex + 1);
-        charIndex++;
-if (charIndex === currentRole.length) {
-            deleting = true;
-            setTimeout(typeEffect, 1500);
-            return;
-        }
-    } else {
-        typing.textContent = currentRole.substring(0, charIndex - 1);
-        charIndex--;
-if (charIndex === 0) {
-            deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
-        }
-    }
-setTimeout(typeEffect, deleting ? 60 : 120);
-}
-typeEffect();
-</script>
-<script>
-const hiddenElements = document.querySelectorAll(".card, .skill");
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
-    });
-}, {
-    threshold: 0.2
-});
-hiddenElements.forEach(el => observer.observe(el));
-</script>
-<script>
-const glow = document.querySelector(".cursor-glow");
-
-let mouseX = 0;
-let mouseY = 0;
-let currentX = 0;
-let currentY = 0;
-
-document.addEventListener("mousemove", (e)=>{
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-});
-function animateGlow(){
-    currentX += (mouseX - currentX) * 0.15;
-    currentY += (mouseY - currentY) * 0.15;
-glow.style.left = currentX + "px";
-    glow.style.top = currentY + "px";
-requestAnimationFrame(animateGlow);
-}
-animateGlow();
-</script>
+    <script src="script.js"></script>
 </body>
 </html>

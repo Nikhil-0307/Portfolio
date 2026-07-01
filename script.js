@@ -1,4 +1,3 @@
-
 const toggle = document.getElementById("theme-toggle");
 toggle.addEventListener("click", () => {
     document.body.classList.toggle("light-mode");
@@ -9,22 +8,24 @@ if (document.body.classList.contains("light-mode")) {
     }
 });
 
-
 const roles = [
     "Full Stack Developer",
     "Web Developer",
     "Front-End Developer"
 ];
+
 const typing = document.getElementById("typing");
 let roleIndex = 0;
 let charIndex = 0;
 let deleting = false;
 function typeEffect() {
     const currentRole = roles[roleIndex];
-if (!deleting) {
+
+    if (!deleting) {
         typing.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
-if (charIndex === currentRole.length) {
+
+    if (charIndex === currentRole.length) {
             deleting = true;
             setTimeout(typeEffect, 1500);
             return;
@@ -32,12 +33,13 @@ if (charIndex === currentRole.length) {
     } else {
         typing.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
-if (charIndex === 0) {
+    if (charIndex === 0) {
             deleting = false;
             roleIndex = (roleIndex + 1) % roles.length;
         }
     }
-setTimeout(typeEffect, deleting ? 60 : 120);
+
+    setTimeout(typeEffect, deleting ? 60 : 120);
 }
 typeEffect();
 
@@ -51,4 +53,10 @@ const observer = new IntersectionObserver((entries) => {
 }, {
     threshold: 0.2
 });
-hiddenElements.forEach(el => observer.observe(el));
+    hiddenElements.forEach(el => observer.observe(el));
+
+    const cursor = document.querySelector(".cursor-glow");
+document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
