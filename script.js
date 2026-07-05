@@ -1,6 +1,6 @@
-// ==========================
+// ===============================
 // THEME TOGGLE
-// ==========================
+// ===============================
 
 const toggle = document.getElementById("theme-toggle");
 
@@ -15,9 +15,9 @@ toggle.addEventListener("click", () => {
 });
 
 
-// ==========================
+// ===============================
 // TYPING EFFECT
-// ==========================
+// ===============================
 
 const roles = [
     "Full Stack Developer",
@@ -33,14 +33,14 @@ let deleting = false;
 
 function typeEffect() {
 
-    const current = roles[roleIndex];
+    const currentRole = roles[roleIndex];
 
     if (!deleting) {
 
-        typing.textContent = current.substring(0, charIndex + 1);
+        typing.textContent = currentRole.substring(0, charIndex + 1);
         charIndex++;
 
-        if (charIndex === current.length) {
+        if (charIndex === currentRole.length) {
             deleting = true;
             setTimeout(typeEffect, 1500);
             return;
@@ -48,7 +48,7 @@ function typeEffect() {
 
     } else {
 
-        typing.textContent = current.substring(0, charIndex - 1);
+        typing.textContent = currentRole.substring(0, charIndex - 1);
         charIndex--;
 
         if (charIndex === 0) {
@@ -65,9 +65,9 @@ function typeEffect() {
 typeEffect();
 
 
-// ==========================
-// SCROLL ANIMATION
-// ==========================
+// ===============================
+// SCROLL REVEAL ANIMATION
+// ===============================
 
 const observer = new IntersectionObserver((entries) => {
 
@@ -83,20 +83,82 @@ const observer = new IntersectionObserver((entries) => {
     threshold: 0.2
 });
 
-document.querySelectorAll(".card, .skill").forEach(element => {
+document.querySelectorAll(".card, .skill, .stat").forEach(element => {
     observer.observe(element);
 });
 
 
-// ==========================
-// CURSOR GLOW
-// ==========================
+// ===============================
+// SMOOTH NAVIGATION
+// ===============================
 
-const cursor = document.querySelector(".cursor-glow");
+document.querySelectorAll("nav a").forEach(anchor => {
 
-document.addEventListener("mousemove", (e) => {
+    anchor.addEventListener("click", function(e) {
 
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
+
+});
+
+
+// ===============================
+// ACTIVE NAV LINK
+// ===============================
+
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+
+
+// ===============================
+// BUTTON RIPPLE EFFECT
+// ===============================
+
+document.querySelectorAll(".btn").forEach(button => {
+
+    button.addEventListener("mouseenter", () => {
+
+        button.style.transform = "translateY(-6px)";
+
+    });
+
+    button.addEventListener("mouseleave", () => {
+
+        button.style.transform = "translateY(0)";
+
+    });
 
 });

@@ -1,382 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nikhil K | Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
-<div class="cursor-glow"></div>
-<div class="bg-animation">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
 
-<nav>
-    <div class="logo">
-        Nikhil <span>K</span>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 
-    <div class="nav-links">
+    <!-- Navigation -->
+    <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
 
-        <button id="theme-toggle">
-            🌙
-        </button>
-    </div>
-</nav>
+        <button id="theme-toggle">🌙</button>
+    </nav>
 
-<header>
-<img src="profile.jpg" class="profile-pic" alt="Nikhil">
-<h1>
+    <!-- Hero -->
+    <header>
 
-Hello,
-I'm
-<span class="highlight">
+        <img src="profile.jpg" alt="Nikhil" class="profile-pic">
 
-Nikhil K
-</span>
-</h1>
+        <h1>
+            Nikhil <span class="highlight">K</span>
+        </h1>
 
-<h2>
-<span id="typing"></span>
-</h2>
+        <p class="hero-role">
+            <span id="typing"></span>
+        </p>
 
-<p>
+        <p class="hero-description">
+            Passionate about creating responsive websites and modern web
+            applications using HTML, CSS, JavaScript, Angular and MongoDB.
+        </p>
 
-Passionate about creating modern responsive websites
-and web applications.
+        <div class="hero-buttons">
 
-</p>
+            <a href="resume.pdf" download class="btn primary">
+                Download Resume
+            </a>
 
-<div class="hero-buttons">
+            <a href="https://github.com/Nikhil-0307"
+               target="_blank"
+               class="btn secondary">
+                GitHub
+            </a>
 
-<a href="resume.pdf" download class="btn primary">
+        </div>
 
-Download Resume
+        <div class="scroll-indicator"></div>
 
-</a>
+    </header>
 
-<a href="https://github.com/Nikhil-0307"
+    <!-- Hero Stats -->
 
-target="_blank"
+    <section class="hero-stats">
 
-class="btn secondary">
+        <div class="stat">
+            <h2>6+</h2>
+            <p>Technologies</p>
+        </div>
 
-GitHub
+        <div class="stat">
+            <h2>4+</h2>
+            <p>Projects</p>
+        </div>
 
-</a>
+        <div class="stat">
+            <h2>100%</h2>
+            <p>Passion</p>
+        </div>
 
-</div>
+    </section>
 
-</header>
+    <!-- About -->
 
+    <section id="about">
 
+        <h2 class="section-title">About Me</h2>
 
-<section id="about">
+        <div class="card about-card">
 
-<h2 class="section-title">
+            <div class="about-text">
 
-About Me
+                <h3>Hello, I'm Nikhil 👋</h3>
 
-</h2>
+                <p>
+                    I am an aspiring Full Stack Developer who loves creating
+                    beautiful, responsive and user-friendly websites.
 
-<div class="card">
+                    I enjoy learning new technologies, solving problems and
+                    improving my development skills every day.
 
-<p>
+                    My goal is to become a professional Full Stack Developer and
+                    build high-quality web applications.
+                </p>
 
-I am an aspiring Full Stack Developer who enjoys
-building responsive websites and modern web
-applications.
+            </div>
 
-I love learning new technologies and continuously
-improving my programming skills.
+        </div>
 
-</p>
+    </section>
 
-</div>
+    <!-- Skills -->
 
-</section>
+    <section id="skills">
 
-<!-- ================= SKILLS ================= -->
+        <h2 class="section-title">
+            Skills
+        </h2>
 
-<section id="skills">
+        <div class="skills">
 
-<h2 class="section-title">
+            <div class="skill">
 
-Skills
+                <p>HTML5 <span>95%</span></p>
 
-</h2>
+                <div class="bar">
+                    <div class="progress html"></div>
+                </div>
 
-<div class="skills">
+            </div>
 
-<div class="skill">
+            <div class="skill">
 
-<i class="fa-brands fa-html5"></i>
+                <p>CSS3 <span>90%</span></p>
 
-<h3>HTML5</h3>
+                <div class="bar">
+                    <div class="progress css"></div>
+                </div>
 
-<div class="bar">
+            </div>
 
-<div class="progress html"></div>
+            <div class="skill">
 
-</div>
+                <p>JavaScript <span>85%</span></p>
 
-</div>
+                <div class="bar">
+                    <div class="progress js"></div>
+                </div>
 
-<div class="skill">
+            </div>
 
-<i class="fa-brands fa-css3-alt"></i>
+            <div class="skill">
 
-<h3>CSS3</h3>
+                <p>Angular <span>75%</span></p>
 
-<div class="bar">
+                <div class="bar">
+                    <div class="progress angular"></div>
+                </div>
 
-<div class="progress css"></div>
+            </div>
 
-</div>
+            <div class="skill">
 
-</div>
+                <p>MongoDB <span>70%</span></p>
 
-<div class="skill">
+                <div class="bar">
+                    <div class="progress mongo"></div>
+                </div>
 
-<i class="fa-brands fa-js"></i>
+            </div>
 
-<h3>JavaScript</h3>
+            <div class="skill">
 
-<div class="bar">
+                <p>Git & GitHub <span>90%</span></p>
 
-<div class="progress js"></div>
+                <div class="bar">
+                    <div class="progress github"></div>
+                </div>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<div class="skill">
+    </section>
 
-<i class="fa-brands fa-angular"></i>
+    <!-- Education -->
 
-<h3>Angular</h3>
+    <section id="education">
 
-<div class="bar">
+        <h2 class="section-title">
+            Education
+        </h2>
 
-<div class="progress angular"></div>
+        <div class="card">
 
-</div>
+            <h3>🎓 Bachelor's Degree</h3>
 
-</div>
+            <p>
+                Currently pursuing my Bachelor's Degree with a focus on
+                Web Development and Full Stack technologies.
+            </p>
 
-<div class="skill">
+        </div>
 
-<i class="fa-solid fa-database"></i>
+        <div class="card">
 
-<h3>MongoDB</h3>
+            <h3>📜 Certifications</h3>
 
-<div class="bar">
+            <ul>
 
-<div class="progress mongo"></div>
+                <li>HTML & CSS – Great Learning</li>
 
-</div>
+                <li>JavaScript – Great Learning</li>
 
-</div>
+                <li>Git & GitHub – Great Learning</li>
 
-<div class="skill">
+                <li>Introduction to Front-End Development – Coursera</li>
 
-<i class="fa-brands fa-github"></i>
+            </ul>
 
-<h3>GitHub</h3>
+        </div>
 
-<div class="bar">
+        <div class="card">
 
-<div class="progress github"></div>
+            <h3>🏆 Achievements</h3>
 
-</div>
+            <p>
+                Building modern portfolio websites, learning Full Stack
+                Development and improving coding skills every day.
+            </p>
 
-</div>
+        </div>
 
-</div>
+    </section>
 
-</section>
+    <!-- Projects -->
 
-<!-- ================= EDUCATION ================= -->
+    <section id="projects">
 
-<section id="education">
+        <h2 class="section-title">
+            Projects
+        </h2>
 
-<h2 class="section-title">
+        <div class="projects">
 
-Education
+            <div class="card project-card">
 
-</h2>
+                <h3>Portfolio Website</h3>
 
-<div class="card">
+                <p>
+                    Personal portfolio built using HTML, CSS and JavaScript.
+                </p>
 
-<h3>🎓 Bachelor's Degree</h3>
+            </div>
 
-<p>
+            <div class="card project-card">
 
-Currently pursuing my Bachelor's Degree with
-a focus on Web Development.
+                <h3>Calculator App</h3>
 
-</p>
+                <p>
+                    Responsive calculator application using JavaScript.
+                </p>
 
-</div>
+            </div>
 
-<div class="card">
+            <div class="card project-card">
 
-<h3>📜 Certifications</h3>
+                <h3>Coming Soon</h3>
 
-<ul>
+                <p>
+                    More exciting Full Stack projects are on the way.
+                </p>
 
-<li>HTML & CSS - Great Learning</li>
+            </div>
 
-<li>JavaScript - Great Learning</li>
+        </div>
 
-<li>Git & GitHub - Great Learning</li>
+    </section>
 
-<li>Introduction to Front-End Development - Coursera</li>
+    <!-- Quote -->
 
-</ul>
+    <section class="quote">
 
-</div>
+        <h2>
+            "Code. Learn. Build. Repeat."
+        </h2>
 
-<div class="card">
+    </section>
 
-<h3>🏆 Achievements</h3>
+    <!-- Contact -->
 
-<p>
+    <section id="contact">
 
-Building projects regularly and continuously
-improving my development skills.
+        <h2 class="section-title">
+            Contact
+        </h2>
 
-</p>
+        <div class="card contact">
 
-</div>
+            <h3>Let's Connect</h3>
 
-</section>
+            <p>📧 nikhil0307k@gmail.com</p>
 
-<!-- ================= PROJECTS ================= -->
+            <p>💻 github.com/Nikhil-0307</p>
 
-<section id="projects">
+        </div>
 
-<h2 class="section-title">
+    </section>
 
-Projects
+    <!-- Footer -->
 
-</h2>
+    <footer>
 
-<div class="projects">
+        <p>
+            © 2026 Nikhil K | All Rights Reserved
+        </p>
 
-<div class="card">
+    </footer>
 
-<h3>
-
-Portfolio Website
-
-</h3>
-
-<p>
-
-Responsive personal portfolio using HTML,
-CSS and JavaScript.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Calculator App
-
-</h3>
-
-<p>
-
-Responsive calculator built using JavaScript.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>
-
-Future Projects
-
-</h3>
-
-<p>
-
-More Full Stack projects coming soon.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact">
-
-<h2 class="section-title">
-
-Contact
-
-</h2>
-
-<div class="card contact">
-
-<p>
-
-<i class="fa-solid fa-envelope"></i>
-
-nikhil0307k@gmail.com
-
-</p>
-
-<p>
-
-<i class="fa-brands fa-github"></i>
-
-github.com/Nikhil-0307
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-<p>
-
-© 2026 Nikhil K | All Rights Reserved
-
-</p>
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
