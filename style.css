@@ -295,33 +295,44 @@ section{
 /* =========================
    SKILLS
 ========================= */
-
 .skills{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:25px;
 }
 
 .skill{
-    background:#1e293b;
-    border-radius:18px;
-    padding:25px;
-    transition:.35s;
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.15);
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    transition:.4s;
+}
+
+.skill i{
+    font-size:70px;
+    margin-bottom:20px;
+    color:#38bdf8;
+    transition:.4s;
+}
+
+.skill h3{
+    margin-top:10px;
+    font-size:22px;
 }
 
 .skill:hover{
-    transform:translateY(-10px);
-    background:#233552;
-    box-shadow:0 15px 35px rgba(56,189,248,.35);
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(56,189,248,.35);
 }
 
-.skill p{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:10px;
-    font-weight:600;
+.skill:hover i{
+    transform:scale(1.2) rotate(8deg);
+    color:white;
 }
+
 
 /* =========================
    SKILL BARS
