@@ -567,13 +567,17 @@ footer{
         opacity:0;
     }
 }
-```css
+
 /* =========================
    RESPONSIVE DESIGN
    Desktop + Laptop + Tablet + Mobile
 ========================= */
 
-/* Large Desktop */
+
+/* =========================
+   LARGE DESKTOP / PC
+========================= */
+
 @media (min-width: 1200px) {
 
     header {
@@ -583,6 +587,7 @@ footer{
     .profile-pic {
         width: 240px;
         height: 240px;
+        margin-top: 40px;       /* MOVE PROFILE DOWN */
     }
 
     header h1 {
@@ -595,7 +600,10 @@ footer{
 }
 
 
-/* Laptop */
+/* =========================
+   LAPTOP
+========================= */
+
 @media (min-width: 769px) and (max-width: 1199px) {
 
     nav {
@@ -611,6 +619,7 @@ footer{
     .profile-pic {
         width: 210px;
         height: 210px;
+        margin-top: 40px;       /* MOVE PROFILE DOWN */
     }
 
     header h1 {
@@ -637,7 +646,10 @@ footer{
 }
 
 
-/* Tablet */
+/* =========================
+   TABLET
+========================= */
+
 @media (min-width: 481px) and (max-width: 768px) {
 
     nav {
@@ -658,6 +670,7 @@ footer{
     .profile-pic {
         width: 180px;
         height: 180px;
+        margin-top: 25px;       /* MOVE PROFILE DOWN */
     }
 
     header h1 {
@@ -705,10 +718,14 @@ footer{
 }
 
 
-/* Mobile */
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 480px) {
 
     /* NAVBAR */
+
     nav {
         position: fixed;
         top: 0;
@@ -732,203 +749,80 @@ footer{
 
 
     /* HERO */
+
     header {
         min-height: 100vh;
-        width: 100%;
         padding: 100px 15px 50px;
-        justify-content: center;
-        overflow: visible;
     }
 
 
-    /* PROFILE PHOTO */
+    /* PROFILE */
+
     .profile-pic {
         width: 150px;
         height: 150px;
-        border-width: 4px;
-        object-fit: cover;
-        object-position: center top;
+        margin-top: 25px;       /* MOVE PROFILE DOWN */
     }
 
 
-    /* NAME */
     header h1 {
         font-size: 2.2rem;
-        line-height: 1.2;
         margin-top: 20px;
     }
 
-
-    /* ROLE */
     .hero-role {
         font-size: 1.25rem;
-        line-height: 1.4;
-        margin-top: 12px;
     }
 
-
-    /* DESCRIPTION */
     .hero-description {
         font-size: 0.95rem;
         line-height: 1.6;
         padding: 0 5px;
-        margin: 15px auto;
     }
 
 
     /* BUTTONS */
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
         gap: 12px;
-        width: 100%;
-        margin-top: 20px;
     }
 
     .btn {
         width: 85%;
         max-width: 260px;
-        padding: 11px 20px;
-        text-align: center;
-    }
-
-
-    /* SCROLL INDICATOR */
-    .scroll-indicator {
-        height: 45px;
-        margin-top: 35px;
-    }
-
-
-    /* SECTIONS */
-    section {
-        width: 100%;
-        padding: 65px 15px;
-    }
-
-    .section-title {
-        font-size: 1.9rem;
-        margin-bottom: 30px;
     }
 
 
     /* STATS */
+
     .hero-stats {
-        width: 100%;
         grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 0 15px;
-        margin: 40px auto;
-    }
-
-    .stat {
-        padding: 25px 15px;
-    }
-
-    .stat h2 {
-        font-size: 2.2rem;
-    }
-
-
-    /* CARDS */
-    .card {
-        padding: 20px 15px;
-        margin: 15px 0;
-    }
-
-
-    /* ABOUT */
-    .about-text h3 {
-        font-size: 1.5rem;
-    }
-
-    .about-text p {
-        font-size: 0.95rem;
-        line-height: 1.7;
     }
 
 
     /* SKILLS */
+
     .skills {
         grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .skill {
-        padding: 25px 15px;
-    }
-
-    .skill i {
-        font-size: 55px;
     }
 
 
     /* PROJECTS */
+
     .projects {
         grid-template-columns: 1fr;
-        gap: 15px;
     }
 
 
-    /* CONTACT */
-    .contact h3 {
-        font-size: 1.5rem;
-    }
-
-    .contact p {
-        font-size: 0.9rem;
-        word-break: break-word;
-    }
-
-
-    /* FOOTER */
-    footer {
-        padding: 20px 10px;
-        font-size: 13px;
-    }
-}
-
-
-/* Very Small Phones */
-@media (max-width: 360px) {
-
-    nav {
-        gap: 5px;
-        padding: 10px 5px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-    header {
-        padding: 95px 10px 40px;
-    }
-
-    .profile-pic {
-        width: 130px;
-        height: 130px;
-    }
-
-    header h1 {
-        font-size: 1.9rem;
-    }
-
-    .hero-role {
-        font-size: 1.1rem;
-    }
-
-    .hero-description {
-        font-size: 0.9rem;
-    }
-
-    .btn {
-        width: 90%;
-    }
+    /* SECTIONS */
 
     section {
-        padding: 55px 10px;
+        padding: 65px 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
-```
-
