@@ -1,5 +1,5 @@
 // ===============================
-// 4-THEME TOGGLE
+// 4 THEME SYSTEM
 // ===============================
 
 const toggle = document.getElementById("theme-toggle");
@@ -25,7 +25,7 @@ const themes = [
 
 let currentTheme = 0;
 
-function changeTheme() {
+function applyTheme() {
 
     document.body.classList.remove(
         "morning",
@@ -35,21 +35,30 @@ function changeTheme() {
         "light-mode"
     );
 
-    const selectedTheme = themes[currentTheme];
+    const theme = themes[currentTheme];
 
-    document.body.classList.add(selectedTheme.name);
+    document.body.classList.add(theme.name);
 
-    toggle.textContent = selectedTheme.icon;
+    toggle.textContent = theme.icon;
+}
+
+
+// Start with Morning
+applyTheme();
+
+
+// Change theme when button is clicked
+toggle.addEventListener("click", () => {
 
     currentTheme++;
 
     if (currentTheme >= themes.length) {
         currentTheme = 0;
     }
-}
 
-toggle.addEventListener("click", changeTheme);
+    applyTheme();
 
+});
 // ===============================
 // TYPING EFFECT
 // ===============================
