@@ -1,19 +1,54 @@
 // ===============================
-// THEME TOGGLE
+// 4-THEME TOGGLE
 // ===============================
 
 const toggle = document.getElementById("theme-toggle");
 
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
-        toggle.textContent = "☀️";
-    } else {
-        toggle.textContent = "🌙";
+const themes = [
+    {
+        name: "morning",
+        icon: "🌅"
+    },
+    {
+        name: "afternoon",
+        icon: "☁️"
+    },
+    {
+        name: "evening",
+        icon: "🌧️"
+    },
+    {
+        name: "night",
+        icon: "🌌"
     }
-});
+];
 
+let currentTheme = 0;
+
+function changeTheme() {
+
+    document.body.classList.remove(
+        "morning",
+        "afternoon",
+        "evening",
+        "night",
+        "light-mode"
+    );
+
+    const selectedTheme = themes[currentTheme];
+
+    document.body.classList.add(selectedTheme.name);
+
+    toggle.textContent = selectedTheme.icon;
+
+    currentTheme++;
+
+    if (currentTheme >= themes.length) {
+        currentTheme = 0;
+    }
+}
+
+toggle.addEventListener("click", changeTheme);
 
 // ===============================
 // TYPING EFFECT
@@ -162,3 +197,4 @@ document.querySelectorAll(".btn").forEach(button => {
     });
 
 });
+
