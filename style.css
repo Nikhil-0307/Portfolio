@@ -572,7 +572,17 @@ footer{
         opacity:0;
     }
 }
+/* =========================
+   LIGHT MODE - BLUE FLOATING CIRCLES
+========================= */
 
+body.light .bg-animation span {
+    background: rgba(0, 140, 255, 0.30);
+
+    box-shadow:
+        0 0 20px rgba(0, 140, 255, 0.35),
+        0 0 40px rgba(0, 140, 255, 0.20);
+}
 /* =========================
    TYPING CURSOR
 ========================= */
