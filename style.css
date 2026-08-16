@@ -894,972 +894,53 @@ body.light .bg-animation span {
         font-size: 2rem;
     }
 }
-/* =========================
-   🌅 MORNING THEME
-   Sunny Sky + Clouds
-========================= */
+/* =====================================================
+   FINAL 4-THEME OVERRIDE
+   Morning → Afternoon → Evening → Night
+===================================================== */
 
-body.morning {
-    background:
-        radial-gradient(
-            circle at 50% -10%,
-            #fff176 0%,
-            #ffe66d 18%,
-            transparent 45%
-        ),
-        linear-gradient(
-            180deg,
-            #fff8b5 0%,
-            #fff3a3 35%,
-            #ffe082 70%,
-            #ffd54f 100%
-        );
-
-    color: #4a3200;
+/* Smooth theme transition */
+body,
+nav,
+header,
+section,
+.card,
+.skill,
+.hero-stats,
+footer,
+.btn {
+    transition:
+        background 0.8s ease,
+        background-color 0.8s ease,
+        color 0.5s ease,
+        border-color 0.5s ease,
+        box-shadow 0.5s ease;
 }
 
-/* Hide the normal floating circles */
 
-body.morning .bg-animation span {
-    width: 180px;
-    height: 65px;
-
-    background: rgba(255, 255, 235, 0.85);
-
-    border-radius: 60px;
-
-    box-shadow:
-        30px 5px 0 -5px rgba(255, 255, 240, 0.80),
-        65px 0 0 -10px rgba(255, 255, 245, 0.75),
-        0 8px 25px rgba(255, 193, 7, 0.15);
-
-    animation: morningClouds 35s linear infinite;
-
-    opacity: 0.85;
-}
-
-/* Cloud positions */
-
-body.morning .bg-animation span:nth-child(1) {
-    top: 15%;
-    left: -250px;
-    animation-duration: 32s;
-}
-
-body.morning .bg-animation span:nth-child(2) {
-    top: 30%;
-    left: -300px;
-    animation-duration: 42s;
-    animation-delay: 5s;
-    transform: scale(0.75);
-}
-
-body.morning .bg-animation span:nth-child(3) {
-    top: 50%;
-    left: -350px;
-    animation-duration: 38s;
-    animation-delay: 10s;
-    transform: scale(1.2);
-}
-
-body.morning .bg-animation span:nth-child(4) {
-    top: 70%;
-    left: -250px;
-    animation-duration: 45s;
-    animation-delay: 3s;
-    transform: scale(0.65);
-}
-
-/* Cloud movement */
-
-@keyframes morningClouds {
-
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(130vw);
-    }
-
-}
-
-/* =========================
-   ☀️ MORNING SUN GLOW
-========================= */
-
-body.morning::before {
-    content: "";
-    position: fixed;
-
-    width: 220px;
-    height: 220px;
-
-    top: 60px;
-    right: 10%;
-
-    border-radius: 50%;
-
-    background: #fff59d;
-
-    box-shadow:
-        0 0 40px #fff176,
-        0 0 90px #ffd54f,
-        0 0 160px rgba(255, 193, 7, 0.55);
-
-    opacity: 0.9;
-
-    z-index: -1;
-}
-
-/* =========================
-   🌅 MORNING CARDS
-========================= */
-
-body.morning .card,
-body.morning .skill {
-
-    background: rgba(255, 255, 255, 0.55);
-
-    border: 1px solid rgba(255, 193, 7, 0.35);
-
-    box-shadow:
-        0 10px 30px rgba(180, 120, 0, 0.12);
-}
-
-/* Morning headings */
-
-body.morning .section-title {
-    color: #b8860b;
-}
-
-/* Morning skill icons */
-
-body.morning .skill i {
-    color: #e6a700;
-}
-
-/* Morning primary button */
-
-body.morning .btn.primary {
-
-    background: linear-gradient(
-        135deg,
-        #ffd54f,
-        #f9a825
-    );
-
-    color: #4a3200;
-
-    box-shadow:
-        0 8px 25px rgba(249, 168, 37, 0.30);
-}
-/* =========================
-   ☁️ AFTERNOON THEME
-   Cloudy & Chill
-========================= */
-
-body.afternoon {
-    background:
-        radial-gradient(
-            circle at 70% 15%,
-            rgba(255, 255, 255, 0.75),
-            transparent 35%
-        ),
-        linear-gradient(
-            180deg,
-            #dbeafe 0%,
-            #bfdbfe 45%,
-            #cbd5e1 100%
-        );
-
-    color: #1e3a5f;
-}
-
-/* Hide normal floating circles */
-body.afternoon .bg-animation span {
-    width: 190px;
-    height: 65px;
-
-    background: rgba(255, 255, 255, 0.75);
-
-    border-radius: 60px;
-
-    box-shadow:
-        30px 5px 0 -5px rgba(255, 255, 255, 0.70),
-        65px 0 0 -10px rgba(255, 255, 255, 0.65),
-        0 8px 25px rgba(100, 120, 150, 0.12);
-
-    animation: afternoonClouds 45s linear infinite;
-    opacity: 0.75;
-}
-
-/* Cloud positions */
-
-body.afternoon .bg-animation span:nth-child(1) {
-    top: 12%;
-    left: -250px;
-    animation-duration: 45s;
-}
-
-body.afternoon .bg-animation span:nth-child(2) {
-    top: 28%;
-    left: -300px;
-    animation-duration: 55s;
-    animation-delay: 5s;
-    transform: scale(0.8);
-}
-
-body.afternoon .bg-animation span:nth-child(3) {
-    top: 48%;
-    left: -350px;
-    animation-duration: 50s;
-    animation-delay: 10s;
-    transform: scale(1.15);
-}
-
-body.afternoon .bg-animation span:nth-child(4) {
-    top: 68%;
-    left: -250px;
-    animation-duration: 60s;
-    animation-delay: 3s;
-    transform: scale(0.7);
-}
-
-/* Cloud movement */
-
-@keyframes afternoonClouds {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(130vw);
-    }
-}
-
-/* Soft cloudy glow */
-
-body.afternoon::before {
-    content: "";
-    position: fixed;
-
-    width: 300px;
-    height: 180px;
-
-    top: 80px;
-    left: 15%;
-
-    border-radius: 50%;
-
-    background: rgba(255, 255, 255, 0.35);
-
-    filter: blur(35px);
-
-    z-index: -1;
-}
-
-/* Afternoon cards */
-
-body.afternoon .card,
-body.afternoon .skill {
-    background: rgba(255, 255, 255, 0.55);
-
-    border: 1px solid rgba(100, 130, 160, 0.20);
-
-    box-shadow:
-        0 10px 30px rgba(60, 90, 120, 0.10);
-}
-
-/* Headings */
-
-body.afternoon .section-title {
-    color: #2563eb;
-}
-
-/* Skill icons */
-
-body.afternoon .skill i {
-    color: #3b82f6;
-}
-
-/* Primary button */
-
-body.afternoon .btn.primary {
-    background: linear-gradient(
-        135deg,
-        #60a5fa,
-        #2563eb
-    );
-
-    color: white;
-
-    box-shadow:
-        0 8px 25px rgba(37, 99, 235, 0.25);
-}
-/* =========================
-   🌧️ EVENING THEME
-   Rain + Lightning
-========================= */
-
-body.evening {
-    background:
-        radial-gradient(
-            circle at 70% 15%,
-            rgba(99, 102, 241, 0.25),
-            transparent 35%
-        ),
-        linear-gradient(
-            180deg,
-            #172554 0%,
-            #1e1b4b 45%,
-            #111827 100%
-        );
-
-    color: #e0e7ff;
-}
-
-/* =========================
-   🌧️ RAIN DROPS
-========================= */
-
-body.evening .bg-animation span {
-    width: 2px;
-    height: 80px;
-
-    border-radius: 0;
-
-    background: linear-gradient(
-        transparent,
-        rgba(147, 197, 253, 0.8)
-    );
-
-    box-shadow: none;
-
-    animation: eveningRain 1.2s linear infinite;
-
-    opacity: 0.55;
-}
-
-/* Rain positions */
-
-body.evening .bg-animation span:nth-child(1) {
-    left: 15%;
-    top: -100px;
-    animation-duration: 1s;
-}
-
-body.evening .bg-animation span:nth-child(2) {
-    left: 40%;
-    top: -150px;
-    animation-duration: 1.4s;
-    animation-delay: 0.3s;
-}
-
-body.evening .bg-animation span:nth-child(3) {
-    left: 65%;
-    top: -120px;
-    animation-duration: 1.1s;
-    animation-delay: 0.6s;
-}
-
-body.evening .bg-animation span:nth-child(4) {
-    left: 85%;
-    top: -180px;
-    animation-duration: 1.5s;
-    animation-delay: 0.2s;
-}
-
-/* Rain movement */
-
-@keyframes eveningRain {
-    0% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    20% {
-        opacity: 0.65;
-    }
-
-    100% {
-        transform: translateY(120vh);
-        opacity: 0;
-    }
-}
-
-/* =========================
-   ⚡ LIGHTNING
-========================= */
-
-body.evening::before {
-    content: "";
-
-    position: fixed;
-    inset: 0;
-
-    background: rgba(255, 255, 255, 0);
-
-    z-index: -1;
-
-    animation: lightningFlash 8s infinite;
-}
-
-@keyframes lightningFlash {
-
-    0%,
-    92%,
-    96%,
-    100% {
-        background: rgba(255, 255, 255, 0);
-    }
-
-    93% {
-        background: rgba(255, 255, 255, 0.18);
-    }
-
-    94% {
-        background: rgba(255, 255, 255, 0);
-    }
-
-    95% {
-        background: rgba(255, 255, 255, 0.10);
-    }
-}
-
-/* =========================
-   🌧️ EVENING CARDS
-========================= */
-
-body.evening .card,
-body.evening .skill {
-    background: rgba(15, 23, 42, 0.65);
-
-    border: 1px solid rgba(129, 140, 248, 0.25);
-
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.25);
-}
-
-/* Headings */
-
-body.evening .section-title {
-    color: #a5b4fc;
-}
-
-/* Skill icons */
-
-body.evening .skill i {
-    color: #818cf8;
-}
-
-/* Primary button */
-
-body.evening .btn.primary {
-    background: linear-gradient(
-        135deg,
-        #6366f1,
-        #4f46e5
-    );
-
-    color: white;
-
-    box-shadow:
-        0 8px 25px rgba(99, 102, 241, 0.35);
-}
-/* =========================
-   🌌 NIGHT GALAXY THEME
-========================= */
-
-body.night {
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(88, 28, 135, 0.35),
-            transparent 35%
-        ),
-        radial-gradient(
-            circle at 80% 70%,
-            rgba(37, 99, 235, 0.25),
-            transparent 40%
-        ),
-        linear-gradient(
-            135deg,
-            #020617 0%,
-            #0f172a 45%,
-            #1e1b4b 100%
-        );
-
-    color: #e0e7ff;
-}
-
-/* =========================
-   ⭐ GALAXY STARS
-========================= */
-
-body.night .bg-animation span {
-    width: 3px;
-    height: 3px;
-
-    border-radius: 50%;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 0 6px #ffffff,
-        0 0 12px rgba(147, 197, 253, 0.9);
-
-    animation: galaxyStars 8s ease-in-out infinite;
-
-    opacity: 0.8;
-}
-
-/* Star positions */
-
-body.night .bg-animation span:nth-child(1) {
-    left: 15%;
-    top: 20%;
-    animation-duration: 6s;
-}
-
-body.night .bg-animation span:nth-child(2) {
-    left: 45%;
-    top: 35%;
-    animation-duration: 9s;
-    animation-delay: 1s;
-}
-
-body.night .bg-animation span:nth-child(3) {
-    left: 70%;
-    top: 18%;
-    animation-duration: 7s;
-    animation-delay: 2s;
-}
-
-body.night .bg-animation span:nth-child(4) {
-    left: 85%;
-    top: 65%;
-    animation-duration: 10s;
-    animation-delay: 3s;
-}
-
-/* Star twinkle */
-
-@keyframes galaxyStars {
-    0%,
-    100% {
-        opacity: 0.25;
-        transform: scale(0.7);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-}
-
-/* =========================
-   🌌 MILKY WAY GLOW
-========================= */
-
-body.night::before {
-    content: "";
-
-    position: fixed;
-
-    width: 180%;
-    height: 280px;
-
-    left: -40%;
-    top: 35%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(129, 140, 248, 0.08),
-            rgba(192, 132, 252, 0.20),
-            rgba(96, 165, 250, 0.10),
-            transparent
-        );
-
-    transform: rotate(-18deg);
-
-    filter: blur(35px);
-
-    z-index: -1;
-
-    pointer-events: none;
-}
-
-/* =========================
-   ✨ GALAXY NEBULA
-========================= */
-
-body.night::after {
-    content: "";
-
-    position: fixed;
-
-    width: 500px;
-    height: 500px;
-
-    top: 10%;
-    left: 35%;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(168, 85, 247, 0.12),
-            transparent 65%
-        );
-
-    filter: blur(30px);
-
-    animation: nebulaMove 15s ease-in-out infinite alternate;
-
-    z-index: -1;
-
-    pointer-events: none;
-}
-
-@keyframes nebulaMove {
-    0% {
-        transform: translate(-40px, -20px);
-    }
-
-    100% {
-        transform: translate(50px, 30px);
-    }
-}
-
-/* =========================
-   🌌 GALAXY CARDS
-========================= */
-
-body.night .card,
-body.night .skill {
-    background: rgba(15, 23, 42, 0.55);
-
-    border: 1px solid rgba(129, 140, 248, 0.25);
-
-    box-shadow:
-        0 10px 35px rgba(0, 0, 0, 0.35),
-        0 0 20px rgba(99, 102, 241, 0.08);
-}
-
-/* Headings */
-
-body.night .section-title {
-    color: #a78bfa;
-}
-
-/* Skill icons */
-
-body.night .skill i {
-    color: #60a5fa;
-}
-
-/* Primary button */
-
-body.night .btn.primary {
-    background:
-        linear-gradient(
-            135deg,
-            #6366f1,
-            #7c3aed
-        );
-
-    color: white;
-
-    box-shadow:
-        0 8px 30px rgba(124, 58, 237, 0.40);
-}
-/* =================================
-   🌅☁️🌧️🌌 FULL PAGE THEME COLORS
-================================= */
-
-/* =========================
+/* =====================================================
    🌅 MORNING
-========================= */
+===================================================== */
 
 body.morning {
     background:
         radial-gradient(
-            circle at 75% 10%,
-            rgba(255, 235, 100, 0.65),
-            transparent 28%
+            circle at 75% 8%,
+            rgba(255, 238, 150, 0.9),
+            transparent 30%
         ),
         linear-gradient(
             180deg,
-            #fff9c4,
-            #ffe082,
-            #ffd54f
+            #fff8d6 0%,
+            #ffe9a8 50%,
+            #ffd66b 100%
         );
 
     color: #3b2a00;
 }
 
-
-/* =========================
-   ☁️ AFTERNOON
-========================= */
-
-body.afternoon {
-    background:
-        linear-gradient(
-            180deg,
-            #dbeafe,
-            #bfdbfe,
-            #cbd5e1
-        );
-
-    color: #18324d;
-}
-
-
-/* =========================
-   🌧️ EVENING
-========================= */
-
-body.evening {
-    background:
-        linear-gradient(
-            180deg,
-            #172554,
-            #1e1b4b,
-            #111827
-        );
-
-    color: #e0e7ff;
-}
-/* =================================
-   NAVIGATION THEME COLORS
-================================= */
-
-body.morning nav {
-    background: rgba(255, 248, 200, 0.65);
-}
-
-body.afternoon nav {
-    background: rgba(219, 234, 254, 0.70);
-}
-
-body.evening nav {
-    background: rgba(15, 23, 42, 0.70);
-}
-
-body.night nav {
-    background: rgba(2, 6, 23, 0.75);
-}
-/* =========================
-   🌌 NIGHT
-========================= */
-
-body.night {
-    background:
-        radial-gradient(
-            circle at 50% 20%,
-            rgba(88, 28, 135, 0.35),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #020617,
-            #0f172a,
-            #1e1b4b
-        );
-
-    color: #e0e7ff;
-}
-/* =================================
-   🌌 REALISTIC NIGHT SKY
-================================= */
-
-body.night .bg-animation span {
-    background: white;
-    border-radius: 50%;
-
-    box-shadow:
-        0 0 5px white,
-        0 0 10px rgba(147, 197, 253, 0.9);
-
-    animation: starTwinkle 4s ease-in-out infinite;
-}
-
-
-/* Different star sizes */
-
-body.night .bg-animation span:nth-child(1) {
-    width: 3px;
-    height: 3px;
-    left: 15%;
-    top: 18%;
-}
-
-body.night .bg-animation span:nth-child(2) {
-    width: 2px;
-    height: 2px;
-    left: 40%;
-    top: 30%;
-}
-
-body.night .bg-animation span:nth-child(3) {
-    width: 4px;
-    height: 4px;
-    left: 72%;
-    top: 16%;
-}
-
-body.night .bg-animation span:nth-child(4) {
-    width: 2px;
-    height: 2px;
-    left: 85%;
-    top: 60%;
-}
-
-
-@keyframes starTwinkle {
-
-    0%,
-    100% {
-        opacity: 0.3;
-        transform: scale(0.7);
-    }
-
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-}
-/* =================================
-   ☄️ SHOOTING STARS
-================================= */
-
-.shooting-stars {
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    overflow: hidden;
-    opacity: 0;
-}
-
-
-/* Only show in Night */
-
-body.night .shooting-stars {
-    opacity: 1;
-}
-
-
-.shooting-stars span {
-    position: absolute;
-
-    width: 120px;
-    height: 2px;
-
-    background: linear-gradient(
-        90deg,
-        transparent,
-        rgba(255, 255, 255, 0.9)
-    );
-
-    border-radius: 50%;
-
-    transform: rotate(-35deg);
-
-    animation: shootingStar 6s linear infinite;
-
-    opacity: 0;
-}
-
-
-/* Star 1 */
-
-.shooting-stars span:nth-child(1) {
-    top: 18%;
-    left: 70%;
-    animation-delay: 2s;
-}
-
-
-/* Star 2 */
-
-.shooting-stars span:nth-child(2) {
-    top: 35%;
-    left: 25%;
-    animation-delay: 5s;
-}
-
-
-/* Star 3 */
-
-.shooting-stars span:nth-child(3) {
-    top: 10%;
-    left: 50%;
-    animation-delay: 8s;
-}
-
-
-@keyframes shootingStar {
-
-    0% {
-        transform:
-            translate(0, 0)
-            rotate(-35deg);
-
-        opacity: 0;
-    }
-
-    5% {
-        opacity: 1;
-    }
-
-    15% {
-        transform:
-            translate(-300px, 180px)
-            rotate(-35deg);
-
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 0;
-    }
-
-}
-/* =================================
-   PROFILE PICTURE THEME GLOW
-================================= */
-
-body.morning .profile-pic {
-    box-shadow:
-        0 0 25px rgba(255, 193, 7, 0.45);
-}
-
-body.afternoon .profile-pic {
-    box-shadow:
-        0 0 25px rgba(59, 130, 246, 0.30);
-}
-
-body.evening .profile-pic {
-    box-shadow:
-        0 0 30px rgba(99, 102, 241, 0.45);
-}
-
-body.night .profile-pic {
-    box-shadow:
-        0 0 35px rgba(139, 92, 246, 0.55),
-        0 0 70px rgba(59, 130, 246, 0.20);
-}
-/* =================================
-   THEME TEXT VISIBILITY
-================================= */
-
-/* 🌅 MORNING */
-body.morning {
+body.morning header,
+body.morning section {
     color: #3b2a00;
 }
 
@@ -1873,17 +954,53 @@ body.morning .hero-description {
 }
 
 body.morning .hero-role {
-    color: #b45309;
+    color: #a16207;
+}
+
+body.morning .highlight {
+    color: #d97706;
+}
+
+body.morning nav {
+    background: rgba(255, 248, 214, 0.82);
+    border-color: rgba(161, 98, 7, 0.18);
 }
 
 body.morning nav a {
     color: #4a3200;
 }
 
+body.morning .card,
+body.morning .skill,
+body.morning .stat {
+    background: rgba(255, 255, 255, 0.38);
+    border-color: rgba(161, 98, 7, 0.18);
+}
 
-/* ☁️ AFTERNOON */
+body.morning .skill i {
+    color: #d97706;
+}
+
+
+/* =====================================================
+   ☁️ AFTERNOON
+===================================================== */
+
 body.afternoon {
-    color: #172554;
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 255, 255, 0.8),
+            transparent 25%
+        ),
+        linear-gradient(
+            180deg,
+            #dff3ff 0%,
+            #b9dcf5 50%,
+            #a9c9df 100%
+        );
+
+    color: #17324d;
 }
 
 body.afternoon h1,
@@ -1892,21 +1009,57 @@ body.afternoon h3,
 body.afternoon p,
 body.afternoon li,
 body.afternoon .hero-description {
-    color: #172554;
+    color: #17324d;
 }
 
 body.afternoon .hero-role {
-    color: #1d4ed8;
+    color: #2563a8;
+}
+
+body.afternoon .highlight {
+    color: #0284c7;
+}
+
+body.afternoon nav {
+    background: rgba(224, 243, 255, 0.82);
+    border-color: rgba(30, 64, 90, 0.18);
 }
 
 body.afternoon nav a {
-    color: #1e3a5f;
+    color: #17324d;
+}
+
+body.afternoon .card,
+body.afternoon .skill,
+body.afternoon .stat {
+    background: rgba(255, 255, 255, 0.42);
+    border-color: rgba(30, 64, 90, 0.16);
+}
+
+body.afternoon .skill i {
+    color: #0284c7;
 }
 
 
-/* 🌧️ EVENING */
+/* =====================================================
+   🌧️ EVENING
+===================================================== */
+
 body.evening {
-    color: #e0e7ff;
+    background:
+        radial-gradient(
+            circle at 70% 15%,
+            rgba(99, 102, 241, 0.28),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #1e3a5f 0%,
+            #172554 50%,
+            #0f172a 100%
+        );
+
+    color: #e5edff;
 }
 
 body.evening h1,
@@ -1915,21 +1068,62 @@ body.evening h3,
 body.evening p,
 body.evening li,
 body.evening .hero-description {
-    color: #e0e7ff;
+    color: #e5edff;
 }
 
 body.evening .hero-role {
     color: #a5b4fc;
 }
 
+body.evening .highlight {
+    color: #60a5fa;
+}
+
+body.evening nav {
+    background: rgba(15, 23, 42, 0.78);
+    border-color: rgba(165, 180, 252, 0.18);
+}
+
 body.evening nav a {
-    color: #e0e7ff;
+    color: #e5edff;
+}
+
+body.evening .card,
+body.evening .skill,
+body.evening .stat {
+    background: rgba(15, 23, 42, 0.48);
+    border-color: rgba(165, 180, 252, 0.16);
+}
+
+body.evening .skill i {
+    color: #60a5fa;
 }
 
 
-/* 🌌 NIGHT */
+/* =====================================================
+   🌌 NIGHT
+===================================================== */
+
 body.night {
-    color: #e0e7ff;
+    background:
+        radial-gradient(
+            ellipse at 50% 25%,
+            rgba(91, 33, 182, 0.32),
+            transparent 38%
+        ),
+        radial-gradient(
+            ellipse at 80% 70%,
+            rgba(30, 64, 175, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #020617 0%,
+            #0f172a 50%,
+            #1e1b4b 100%
+        );
+
+    color: #e5e7ff;
 }
 
 body.night h1,
@@ -1938,13 +1132,304 @@ body.night h3,
 body.night p,
 body.night li,
 body.night .hero-description {
-    color: #e0e7ff;
+    color: #e5e7ff;
 }
 
 body.night .hero-role {
     color: #c4b5fd;
 }
 
+body.night .highlight {
+    color: #60a5fa;
+}
+
+body.night nav {
+    background: rgba(2, 6, 23, 0.82);
+    border-color: rgba(196, 181, 253, 0.18);
+}
+
 body.night nav a {
-    color: #e0e7ff;
+    color: #e5e7ff;
+}
+
+body.night .card,
+body.night .skill,
+body.night .stat {
+    background: rgba(15, 23, 42, 0.48);
+    border-color: rgba(196, 181, 253, 0.16);
+}
+
+body.night .skill i {
+    color: #60a5fa;
+}
+
+
+/* =====================================================
+   👤 PROFILE PICTURE — THEME GLOW
+===================================================== */
+
+body.morning .profile-pic {
+    box-shadow:
+        0 0 25px rgba(245, 158, 11, 0.45);
+}
+
+body.afternoon .profile-pic {
+    box-shadow:
+        0 0 25px rgba(14, 165, 233, 0.40);
+}
+
+body.evening .profile-pic {
+    box-shadow:
+        0 0 30px rgba(99, 102, 241, 0.50);
+}
+
+body.night .profile-pic {
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.65),
+        0 0 75px rgba(59, 130, 246, 0.22);
+}
+
+
+/* =====================================================
+   🌅 MORNING — NO FLOATING CIRCLES
+===================================================== */
+
+body.morning .bg-animation > span,
+body.afternoon .bg-animation > span {
+    display: none;
+}
+
+
+/* =====================================================
+   🌧️ EVENING — RAIN ATMOSPHERE
+===================================================== */
+
+body.evening .bg-animation > span {
+    width: 2px;
+    height: 80px;
+    border-radius: 0;
+
+    background: linear-gradient(
+        transparent,
+        rgba(147, 197, 253, 0.65)
+    );
+
+    animation: rainFall 1.2s linear infinite;
+}
+
+body.evening .bg-animation > span:nth-child(1) {
+    left: 20%;
+    animation-delay: 0.2s;
+}
+
+body.evening .bg-animation > span:nth-child(2) {
+    left: 45%;
+    animation-delay: 0.7s;
+}
+
+body.evening .bg-animation > span:nth-child(3) {
+    left: 70%;
+    animation-delay: 0.4s;
+}
+
+body.evening .bg-animation > span:nth-child(4) {
+    left: 90%;
+    animation-delay: 1s;
+}
+
+@keyframes rainFall {
+    0% {
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   🌌 NIGHT — STAR FIELD
+===================================================== */
+
+body.night .bg-animation > span {
+    background: white;
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 5px white,
+        0 0 12px rgba(147, 197, 253, 0.9);
+
+    animation: starTwinkle 3.5s ease-in-out infinite;
+}
+
+body.night .bg-animation > span:nth-child(1) {
+    width: 3px;
+    height: 3px;
+    left: 15%;
+    top: 18%;
+}
+
+body.night .bg-animation > span:nth-child(2) {
+    width: 2px;
+    height: 2px;
+    left: 40%;
+    top: 30%;
+}
+
+body.night .bg-animation > span:nth-child(3) {
+    width: 4px;
+    height: 4px;
+    left: 72%;
+    top: 16%;
+}
+
+body.night .bg-animation > span:nth-child(4) {
+    width: 2px;
+    height: 2px;
+    left: 85%;
+    top: 60%;
+}
+
+@keyframes starTwinkle {
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+
+/* =====================================================
+   ☄️ SHOOTING STARS — NIGHT ONLY
+===================================================== */
+
+body:not(.night) .shooting-stars {
+    display: none;
+}
+
+body.night .shooting-stars {
+    display: block;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+body.night .shooting-stars span {
+    position: absolute;
+
+    width: 120px;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.95)
+    );
+
+    border-radius: 50%;
+
+    transform: rotate(-35deg);
+
+    animation: shootingStar 7s linear infinite;
+
+    opacity: 0;
+}
+
+body.night .shooting-stars span:nth-child(1) {
+    top: 18%;
+    left: 70%;
+    animation-delay: 1s;
+}
+
+body.night .shooting-stars span:nth-child(2) {
+    top: 38%;
+    left: 55%;
+    animation-delay: 4s;
+}
+
+body.night .shooting-stars span:nth-child(3) {
+    top: 12%;
+    left: 85%;
+    animation-delay: 7s;
+}
+
+@keyframes shootingStar {
+    0% {
+        transform: translate(0, 0) rotate(-35deg);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    18% {
+        transform: translate(-300px, 180px) rotate(-35deg);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* =====================================================
+   BUTTON THEME
+===================================================== */
+
+body.morning .btn.primary {
+    background: #d97706;
+    color: white;
+}
+
+body.afternoon .btn.primary {
+    background: #0284c7;
+    color: white;
+}
+
+body.evening .btn.primary,
+body.night .btn.primary {
+    background: #4f46e5;
+    color: white;
+}
+
+body.morning .btn.secondary,
+body.afternoon .btn.secondary {
+    color: #17324d;
+    border-color: currentColor;
+}
+
+body.evening .btn.secondary,
+body.night .btn.secondary {
+    color: #e5e7ff;
+    border-color: currentColor;
+}
+
+
+/* =====================================================
+   THEME BUTTON
+===================================================== */
+
+#theme-toggle {
+    transition:
+        transform 0.3s ease,
+        background 0.5s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.12);
 }
