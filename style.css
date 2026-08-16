@@ -1473,3 +1473,33 @@ body.night .skill {
     gap: 25px;
     flex-wrap: wrap;
 }
+/* =================================
+   DEVELOPMENT JOURNEY
+================================= */
+
+.hero-stats {
+    display: block !important;
+    width: 100%;
+    text-align: center;
+}
+
+.hero-stats > .section-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto 30px auto;
+}
+
+.hero-stats .stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.hero-stats .stat {
+    flex: 0 0 180px;
+    text-align: center;
+}
