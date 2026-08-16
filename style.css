@@ -1433,3 +1433,43 @@ body.night .btn.secondary {
 #theme-toggle:hover {
     transform: scale(1.12);
 }
+/* =================================
+   SKILLS SQUARE FRAME VISIBILITY
+================================= */
+
+/* 🌅 Morning */
+body.morning .skill {
+    border: 2px solid rgba(120, 85, 20, 0.35);
+}
+
+/* ☁️ Afternoon */
+body.afternoon .skill {
+    border: 2px solid rgba(40, 80, 120, 0.35);
+}
+
+/* 🌧️ Evening */
+body.evening .skill {
+    border: 2px solid rgba(165, 180, 252, 0.30);
+}
+
+/* 🌌 Night */
+body.night .skill {
+    border: 2px solid rgba(196, 181, 253, 0.30);
+}
+/* =================================
+   DEVELOPMENT JOURNEY HEADING
+================================= */
+
+.hero-stats .section-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.hero-stats .stats-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
