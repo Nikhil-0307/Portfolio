@@ -206,4 +206,73 @@ document.querySelectorAll(".btn").forEach(button => {
     });
 
 });
+// ===============================
+// MESSAGE ME POPUP
+// ===============================
 
+const messageButton = document.getElementById("message-button");
+const messageModal = document.getElementById("message-modal");
+const closeMessage = document.getElementById("close-message");
+const messageForm = document.getElementById("message-form");
+
+
+// Open popup
+
+messageButton.addEventListener("click", () => {
+
+    messageModal.classList.add("active");
+
+});
+
+
+// Close popup
+
+closeMessage.addEventListener("click", () => {
+
+    messageModal.classList.remove("active");
+
+});
+
+
+// Close when clicking outside the box
+
+messageModal.addEventListener("click", (event) => {
+
+    if (event.target === messageModal) {
+
+        messageModal.classList.remove("active");
+
+    }
+
+});
+
+
+// Send message
+
+messageForm.addEventListener("submit", (event) => {
+
+    event.preventDefault();
+
+    const name = document.getElementById("message-name").value;
+    const email = document.getElementById("message-email").value;
+    const message = document.getElementById("message-text").value;
+
+
+    const subject = encodeURIComponent(
+        "Portfolio Message from " + name
+    );
+
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nMessage:\n" + message
+    );
+
+
+    window.location.href =
+        "mailto:nikhil0307k@gmail.com?subject=" +
+        subject +
+        "&body=" +
+        body;
+
+});
