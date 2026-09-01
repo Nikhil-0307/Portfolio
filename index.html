@@ -280,25 +280,146 @@
 
     </section>
 
-    <!-- Contact -->
-
     <section id="contact">
+        <!-- Contact -->
 
-        <h2 class="section-title">
-            Contact
-        </h2>
+<section id="contact">
 
-        <div class="card contact">
+    <h2 class="section-title">
+        Contact
+    </h2>
 
-            <h3>Let's Connect</h3>
+    <div class="contact-container">
 
-            <p>📧 nikhil0307k@gmail.com</p>
+        <div class="contact-card">
 
-            <p>💻 github.com/Nikhil-0307</p>
+            <i class="fa-solid fa-envelope"></i>
+
+            <h3>Gmail</h3>
+
+            <p>nikhil0307k@gmail.com</p>
+
+            <a href="mailto:nikhil0307k@gmail.com" class="contact-btn">
+                Email Me
+            </a>
 
         </div>
 
-    </section>
+
+        <div class="contact-card">
+
+            <i class="fa-brands fa-linkedin"></i>
+
+            <h3>LinkedIn</h3>
+
+            <p>Connect with me professionally</p>
+
+            <a href="https://www.linkedin.com/in/nikhil-k-0307"
+               target="_blank"
+               class="contact-btn">
+                View LinkedIn
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-message"></i>
+
+            <h3>Message Me</h3>
+
+            <p>Have a project or opportunity?</p>
+            <button id="message-button" class="contact-btn">
+    <i class="fa-solid fa-message"></i>
+    Message Me
+</button>
+            
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <h3>Mobile</h3>
+
+            <p>+91 9659210090</p>
+
+            <a href="tel:+919659210090" class="contact-btn">
+                Call Me
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <i class="fa-brands fa-github"></i>
+
+            <h3>GitHub</h3>
+
+            <p>Check out my projects</p>
+
+            <a href="https://github.com/Nikhil-0307"
+               target="_blank"
+               class="contact-btn">
+                Visit GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+       <!-- Message Me Popup -->
+
+<div id="message-modal" class="message-modal">
+
+    <div class="message-box">
+
+        <button id="close-message" class="close-message">
+            &times;
+        </button>
+
+        <h2>Message Me 💬</h2>
+
+        <p>Have a question or opportunity? I'd love to hear from you.</p>
+
+        <form id="message-form">
+
+            <input
+                type="text"
+                id="message-name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="message-email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message-text"
+                placeholder="Write your message..."
+                rows="5"
+                required
+            ></textarea>
+
+            <button type="submit" class="contact-btn">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</div> 
 
     <!-- Footer -->
 
